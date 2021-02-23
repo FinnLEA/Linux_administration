@@ -40,8 +40,8 @@
 	
 	---
 	
-			|total |used  |free |shared | buff/cache | available
-	--------|------|------|-----|-------|------------|------------|------------
+	name	|total |used  |free |shared | buff/cache | available
+	--------|------|------|-----|-------|------------|------------
 	Mem:    |3.8Gi |1.7Gi |450Mi|31Mi   |    1.7Gi   |   1.9Gi
 	Swap:   |974Mi |171Mi |803Mi|
 	
