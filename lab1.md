@@ -40,11 +40,13 @@
 	
 	---
 	
-	        |      total  |     used  |     free  |   shared | buff/cache | available
+	        |     total   |    used   |    free   |   shared | buff/cache | available
 	--------|-------------|-----------|-----------|----------|------------|------------
 	Mem:    |     3.8Gi   |   1.7Gi   |   450Mi   |    31Mi  |    1.7Gi   |   1.9Gi
-	Swap:   |     974Mi   |   171Mi   |   803Mi   |          |            |
+	Swap:   |     974Mi   |   171Mi   |   803Mi   |
+	
 	---
+	
 	09:16:46 up 21:49,  1 user,  load average: 0.27, 0.16, 0.18
 
 
