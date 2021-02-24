@@ -49,5 +49,5 @@
 	
 	09:16:46 up 21:49,  1 user,  load average: 0.27, 0.16, 0.18
 
-
+	![screenshot of sample]/linux.jpg
 	 
