@@ -1,9 +1,20 @@
-#include <sys/procfs.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <errno.h>
+#include <sys/prctl.h>
+#include <fstream>
+#include <string>
+#include <mutex>
+#include <cstdlib>
+#include <vector>
+
+std::mutex mutex;
+
+void KillChild(std::vector<pid_t>& childPids){
+    for (auto pid : childPids) {
+		kill(pid, SIGQUIT);
+	}
+}
 
 int main(int argc, char** argv, char** envp){
 
@@ -12,6 +23,7 @@ int main(int argc, char** argv, char** envp){
     int countIter;
     int i, j;
     FILE* handle;
+    std::vector<pid_t> childPids;
 
     if(argc < 4){
         perror("USAGE fork <message> <count processes> <count interation>\n");
@@ -31,10 +43,19 @@ int main(int argc, char** argv, char** envp){
         subPid = fork();
         if(subPid == 0){
             for(j = 0; j < countIter; ++j){
-                sleep(countIter * j);
-                lockf((int)handle, F_LOCK, 0);
+                prctl(PR_SET_PDEATHSIG, SIGHUP);
+                mutex.lock();
                 fprintf(handle, "%s, %d\n", argv[1], j * i);
+                mutex.unlock();
+                sleep(countIter * j);
             }
+        }
+        else if(subPid < 0){
+            KillChild(childPids);
+            return 1;
+        }
+        else{
+            childPids.push_back(subPid);
         }
     }
 
