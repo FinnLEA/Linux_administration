@@ -40,9 +40,16 @@ int main(int argc, char** argv, char** envp){
 
     if(subPid != 0){
         pid_t p;
+        pid_t parentPid = getppid();
         int status;
-        p = waitpid(-1, &status, 0);
+        p = waitpid(-1, &status, 0);    
+        while (p != -1){
+            p = waitpid(-1, &status, 0);
+        }
+        fclose(handle);
+        exit(0);
     }
-
+    
+    fclose(handle);
     return 0;
 }
