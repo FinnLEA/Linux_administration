@@ -56,5 +56,19 @@
 	---
 ---
 
+1. ![screenshot of sample](at.jpg)
 
+---
+
+2. задание задачи на вывод в файл каждую минуту: * * * * * /root/srcipt.sh
+	---
+	![screenshot of sample](cron.jpg)
+	---
+	для удаления вводим crontab -r
+	
+---
+
+3. ![screenshot of sample](mount.jpg)
+
+---
 	
