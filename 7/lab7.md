@@ -138,21 +138,21 @@
 ---
 	на лету
 ---
-<ifconfig eth0 192.168.0.2>
+ifconfig eth0 192.168.0.2
 ---
 2. Остановить и запустить сетевой интерфейс eth0
 ---
-<ifconfig eth0 down>
+	ifconfig eth0 down
 ---
-<ifconfig eth0 up>
+	ifconfig eth0 up
 ---
 3. Произвести смену аппаратного (MAC) адреса сетевого интерфейса eth0
 ---
-![screenshot of sample](pr3.jpg)
+	![screenshot of sample](pr3.jpg)
 ---
 4. Показать таблицу сетевых маршрутов. Установить маршрут по умолчанию
 ---
-<route add default gw 192.168.0.1 eth0>
+	route add default gw 192.168.0.1 eth0
 ---
 	![screenshot of sample](pr4.jpg)
 
