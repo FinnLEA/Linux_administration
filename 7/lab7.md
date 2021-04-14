@@ -132,13 +132,14 @@
 1. Произвести настройку IP адреса сетевого интерфейса eth0 через конфиг и на лету
 ---
 	из файла
-![screenshot of sample](pr1_1.jpg)
+	---
+	![screenshot of sample](pr1_1.jpg)
 ---
-<systemctl restart networking>
+	systemctl restart networking
 ---
 	на лету
 ---
-ifconfig eth0 192.168.0.2
+	ifconfig eth0 192.168.0.2
 ---
 2. Остановить и запустить сетевой интерфейс eth0
 ---
