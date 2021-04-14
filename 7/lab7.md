@@ -153,7 +153,7 @@
 
 3. Произвести смену аппаратного (MAC) адреса сетевого интерфейса eth0
 	---
-	![screenshot of sample](pr3.jpg)
+	![screenshot of sample](pr_3.jpg)
 	
 ---
 
