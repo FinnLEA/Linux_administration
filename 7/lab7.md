@@ -118,13 +118,60 @@
 ---
 	
 17. Какой тип icmp запросов используется в ping утилите?
-	---
+	---	
 	тип 0 (эхо-ответ)
 	---
 	тип 8 (эхо-запрос)
 	
 ---
-
-Практика
-
 ---
+Практика
+---
+---
+
+1. Произвести настройку IP адреса сетевого интерфейса eth0 через конфиг и на лету
+---
+	из файла
+![screenshot of sample](pr1_1.jpg)
+---
+<systemctl restart networking>
+---
+	на лету
+---
+<ifconfig eth0 192.168.0.2>
+---
+2. Остановить и запустить сетевой интерфейс eth0
+---
+<ifconfig eth0 down>
+---
+<ifconfig eth0 up>
+---
+3. Произвести смену аппаратного (MAC) адреса сетевого интерфейса eth0
+---
+![screenshot of sample](pr3.jpg)
+---
+4. Показать таблицу сетевых маршрутов. Установить маршрут по умолчанию
+---
+<route add default gw 192.168.0.1 eth0>
+---
+![screenshot of sample](pr4.jpg)
+---
+5. Получить настройки IP от DHCP сервера
+---
+![screenshot of sample](pr5.jpg)
+---
+![screenshot of sample](pr5_2.jpg)
+---
+6. Проверить пропускную способность между виртуальными машинами
+---
+![screenshot of sample](pr6.jpg)
+---
+7. Настроить связь между виртуальными машинами через vlan 15
+---
+![screenshot of sample](pr7_1.jpg)
+---
+![screenshot of sample](pr7_2.jpg)
+---
+![screenshot of sample](pr7_3.jpg)
+---
+
