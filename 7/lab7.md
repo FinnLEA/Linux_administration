@@ -154,24 +154,40 @@
 ---
 <route add default gw 192.168.0.1 eth0>
 ---
-![screenshot of sample](pr4.jpg)
+	![screenshot of sample](pr4.jpg)
+
 ---
+
 5. Получить настройки IP от DHCP сервера
+
 ---
-![screenshot of sample](pr5.jpg)
+	![screenshot of sample](pr5.jpg)
+
 ---
-![screenshot of sample](pr5_2.jpg)
+
+	![screenshot of sample](pr5_2.jpg)
+
 ---
+
 6. Проверить пропускную способность между виртуальными машинами
+
 ---
-![screenshot of sample](pr6.jpg)
+	![screenshot of sample](pr6.jpg)
+
 ---
+
 7. Настроить связь между виртуальными машинами через vlan 15
+
 ---
-![screenshot of sample](pr7_1.jpg)
+
+	![screenshot of sample](pr7_1.jpg)
+
 ---
-![screenshot of sample](pr7_2.jpg)
+
+	![screenshot of sample](pr7_2.jpg)
+
 ---
-![screenshot of sample](pr7_3.jpg)
+	![screenshot of sample](pr7_3.jpg)
+	
 ---
 
