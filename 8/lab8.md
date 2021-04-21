@@ -63,5 +63,37 @@
 ---
 
 Практика.
+---
+	---
+	![screenshot of sample](pr_ssh.jpg)
+	
+---
+
+1.  настроить правила которые разрешают доступ на этот сервер с определенной подсети или хоста в которой находитесь вы как клиент, продемонстрировать что работает icmp.
+	---
+		iptables -I INPUT -s 192.168.241.1 -j ACCEPT
+	---
+	![screenshot of sample](pr_1.jpg)
+	
+---
+
+2. Затем закрыть доступ из этой подсети по icmp, осавив доступ по ssh, продемонстрировать что хост по ssh доступен а icmp нет
+	---
+		iptables -I INPUT -s 192.168.241.1 -j DROP
+	---
+		iptables -I INPUT -s 192.168.241.1 -p tcp --dport 22 -j ACCEPT
+	---
+	![screenshot of sample](pr_2.jpg)
 
 ---
+	
+3. Запретить только ssh, но icmp работает, сервер пигается
+	---
+		iptables -I INPUT -s 192.168.241.1 -p tcp --dport 22 -j DROP
+	---
+	![screenshot of sample](pr_3.jpg
+
+---
+	
+	
+
