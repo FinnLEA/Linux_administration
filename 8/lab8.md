@@ -63,14 +63,16 @@
 ---
 
 Практика.
----
-![screenshot of sample](pr_ssh.jpg)
----
+
+	---
+	![screenshot of sample](pr_ssh.jpg)
+	---
 
 1.  настроить правила которые разрешают доступ на этот сервер с определенной подсети или хоста в которой находитесь вы как клиент, продемонстрировать что работает icmp.
 	---
 		iptables -I INPUT -s 192.168.241.1 -j ACCEPT
 	---
+	
 	![screenshot of sample](pr_1.jpg)
 	
 ---
@@ -81,6 +83,7 @@
 	---
 		iptables -I INPUT -s 192.168.241.1 -p tcp --dport 22 -j ACCEPT
 	---
+	
 	![screenshot of sample](pr_2.jpg)
 
 ---
@@ -89,6 +92,7 @@
 	---
 		iptables -I INPUT -s 192.168.241.1 -p tcp --dport 22 -j DROP
 	---
+	
 	![screenshot of sample](pr_3.jpg
 
 ---
