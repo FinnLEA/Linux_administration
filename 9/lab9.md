@@ -84,3 +84,52 @@
 
 ---
 
+1. Добавить в виртуальном сервере два hdd
+---
+![screenshot of sample](hdd.jpg)
+---
+
+2. Собрать на них raid1 массив
+	---
+		cfdisk /dev/sdb
+	---
+		cfdisk /dev/sdc
+	---
+	![screenshot of sample](cfdisk_1.jpg)
+	---
+	![screenshot of sample](cfdisk_2.jpg)
+	---
+	![screenshot of sample](mdadm_1.jpg)
+	---
+	![screenshot of sample](mdadm_2.jpg)
+	
+---
+
+3. Поверх raid массива развернуть lvm.
+	---
+		pvcreate /dev/md1
+	---
+		vgcreate test /dev/md1
+	---
+		lvcreate -n test -L4G test
+	---
+	![screenshot of sample](lvm_1.jpg)
+	
+---
+
+4. создать файловую систему в lvm разделах и примонтировать в систему
+	---
+	![screenshot of sample](lvm_2.jpg)
+
+---
+
+5. продемонстрировать умение замены жесткого диска
+	---
+	![screenshot of sample](lvm_3.jpg)
+	---
+	![screenshot of sample](lvm_4.jpg)
+	
+---
+
+	
+	
