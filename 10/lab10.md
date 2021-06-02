@@ -32,6 +32,68 @@
 	
 
 ## Практические задания.
+	
+	1. ![linux console](pr1_1.jpg "Console")
+	
+	![linux console](pr1_2.jpg "Console")
+	
+	```bash
+	$ docker run docker run nginx
+	```
+	
+	```bash
+	$ docker stop nginx
+	```
+	
+	```bash
+	$ docker rm <контейнер>
+	```
+	
+2. создание своего собственного docker image (например nginx или любого другого).
 
+	```bash
+	$ copy ./index.html /user/share/ngnix/html/index.html
+	```
+	
+	```bash
+	$ docker build -t mynginx 
+	```
+	
+	![linux console](pr2_1.jpg "Console")
 
+3. запуск контейнера, остановка, удаление
 
+	```bash
+	$ docker run --name my_nginx -it mynginx
+	```
+	
+	```bash
+	$ docker stop my_nginx
+	$ docker rm my_nginx
+	```
+	
+4. написание микросервиса в docker-compose с сетями bridge и macvlan
+	
+	![linux console](pr4_1.jpg "Console")
+	
+	docker-compose.yml
+		```
+		version: '3'
+		services:
+		  web:
+			build: .
+			ports:
+			  - "5000:5000"
+		  redis:
+			image: "redis:alpine"
+		```
+		
+	```bash
+	$ docker-compose build
+	$ docker-compose up
+	```
+	
+	![linux console](pr4_2.jpg "Console")
+	
+	
+	
