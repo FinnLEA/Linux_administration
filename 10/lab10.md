@@ -33,7 +33,9 @@
 
 ## Практические задания.
 	
-	1. ![linux console](pr1_1.jpg "Console")
+1. запуск любого контейнера с docker-hub
+
+	![linux console](pr1_1.jpg "Console")
 	
 	![linux console](pr1_2.jpg "Console")
 	
@@ -77,6 +79,7 @@
 	![linux console](pr4_1.jpg "Console")
 	
 	docker-compose.yml
+	
 		```
 		version: '3'
 		services:
